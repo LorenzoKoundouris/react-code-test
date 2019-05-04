@@ -27,7 +27,12 @@ class ToDoList extends Component {
   };
 
   completeToDo = (index) => {
-    this.state.toDos.splice(index, 1);
+    const toDoList = this.state.toDos;
+    this.setState({
+      toDos: toDoList
+        .slice(0, index)
+        .concat(toDoList.slice(index + 1, toDoList.length)),
+    });
   };
 
   render() {
