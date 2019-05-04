@@ -11,7 +11,7 @@ class ToDo extends Completable {
   render() {
     return (
       <li className={styles.toDo}>
-        <input type="checkbox" onChange={this.completeToDo} />
+        <input type="checkbox" checked={false} onChange={this.completeToDo} />
         <div className={styles.toDoContent}>{this.props.value}</div>
       </li>
     );
