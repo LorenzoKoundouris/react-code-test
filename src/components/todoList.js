@@ -40,7 +40,12 @@ class ToDoList extends Component {
         </div>
         <ul className={styles.list}>
           {toDos.map((toDo, index) => (
-            <ToDo value={toDo} index={index} completeToDo={this.completeToDo} />
+            <ToDo
+              value={toDo}
+              index={index}
+              completeToDo={this.completeToDo}
+              key={index}
+            />
           ))}
         </ul>
       </div>
