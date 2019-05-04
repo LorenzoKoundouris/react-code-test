@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ToDo from './todo';
 
-import styles from '../src/styles.scss';
+import styles from '../styles.scss';
 
 class ToDoList extends Component {
   constructor(props) {
