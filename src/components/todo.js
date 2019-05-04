@@ -12,11 +12,9 @@ class ToDo extends Completable {
     return (
       <li className={styles.todo}>
         <input type="checkbox" onChange={this.completeTodo} />
-        <li className={styles.todoContent}>
-          {this.props.value}
-        </li>
+        <li className={styles.todoContent}>{this.props.value}</li>
       </li>
-    )
+    );
   }
 }
 

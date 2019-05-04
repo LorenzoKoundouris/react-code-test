@@ -10,25 +10,25 @@ class ToDoList extends Component {
     this.state = {
       todos: ['Finish this test'],
       newTodo: '',
-    }
+    };
   }
 
   handleChange = (event) => {
     this.setState({
       newTodo: event.target.value,
     });
-  }
+  };
 
   addTodo = () => {
     this.setState({
       todos: [...this.state.todos, this.state.newTodo],
       newTodo: '',
     });
-  }
+  };
 
   completeTodo = (index) => {
-    this.state.todos.splice(index, 1)
-  }
+    this.state.todos.splice(index, 1);
+  };
 
   render() {
     const { todos, newTodo } = this.state;
@@ -39,11 +39,12 @@ class ToDoList extends Component {
           <button onClick={this.addTodo}>Add</button>
         </div>
         <ul className={styles.list}>
-          {todos.map((todo, index) => <ToDo value={todo} index={index} completeTodo={this.completeTodo}></ToDo>)}
+          {todos.map((todo, index) => (
+            <ToDo value={todo} index={index} completeTodo={this.completeTodo} />
+          ))}
         </ul>
       </div>
-
-    )
+    );
   }
 }
 

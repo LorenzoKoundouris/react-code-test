@@ -7,7 +7,7 @@ class Completable extends Component {
 
   completeTodo = () => {
     this.props.completeTodo(this.props.index);
-  }
+  };
 }
 
 export default Completable;

@@ -11,10 +11,12 @@ class App extends Component {
   }
 
   render() {
-    return <div>
-      <h2 className={styles.title}>Here is my To Do list for today</h2>
-      <ToDoList />
-    </div>;
+    return (
+      <div>
+        <h2 className={styles.title}>Here is my To Do list for today</h2>
+        <ToDoList />
+      </div>
+    );
   }
 }
 

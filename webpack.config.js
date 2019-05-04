@@ -21,25 +21,24 @@ module.exports = {
               localIdentName: '[local]__[hash:base64:5]',
               importLoaders: 1,
               sourceMap: true,
-            }
+            },
           },
-          require.resolve('sass-loader')],
-      }
-    ]
+          require.resolve('sass-loader'),
+        ],
+      },
+    ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx'],
   },
   output: {
     path: __dirname + '/public',
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
     contentBase: './public',
-    hot: true
-  }
+    hot: true,
+  },
 };
