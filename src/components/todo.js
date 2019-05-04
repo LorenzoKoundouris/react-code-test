@@ -1,5 +1,5 @@
 import React from 'react';
-import Completable from '../completable';
+import Completable from './completable';
 
 import styles from '../styles.scss';
 
