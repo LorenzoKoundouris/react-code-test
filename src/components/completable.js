@@ -5,8 +5,8 @@ class Completable extends Component {
     super(props);
   }
 
-  completeTodo = () => {
-    this.props.completeTodo(this.props.index);
+  completeToDo = () => {
+    this.props.completeToDo(this.props.index);
   };
 }
 

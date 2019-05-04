@@ -1,5 +1,5 @@
 import React from 'react';
-import Completable from './completable';
+import Completable from './Completable';
 
 import styles from '../styles.scss';
 
@@ -10,9 +10,9 @@ class ToDo extends Completable {
 
   render() {
     return (
-      <li className={styles.todo}>
-        <input type="checkbox" onChange={this.completeTodo} />
-        <li className={styles.todoContent}>{this.props.value}</li>
+      <li className={styles.toDo}>
+        <input type="checkbox" onChange={this.completeToDo} />
+        <li className={styles.toDoContent}>{this.props.value}</li>
       </li>
     );
   }

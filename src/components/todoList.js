@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ToDo from './todo';
+import ToDo from './ToDo';
 
 import styles from '../styles.scss';
 
@@ -8,39 +8,39 @@ class ToDoList extends Component {
     super(props);
 
     this.state = {
-      todos: ['Finish this test'],
-      newTodo: '',
+      toDos: ['Finish this test'],
+      newToDo: '',
     };
   }
 
   handleChange = (event) => {
     this.setState({
-      newTodo: event.target.value,
+      newToDo: event.target.value,
     });
   };
 
-  addTodo = () => {
+  addToDo = () => {
     this.setState({
-      todos: [...this.state.todos, this.state.newTodo],
-      newTodo: '',
+      toDos: [...this.state.toDos, this.state.newToDo],
+      newToDo: '',
     });
   };
 
-  completeTodo = (index) => {
-    this.state.todos.splice(index, 1);
+  completeToDo = (index) => {
+    this.state.toDos.splice(index, 1);
   };
 
   render() {
-    const { todos, newTodo } = this.state;
+    const { toDos, newToDo } = this.state;
     return (
       <div className={styles.container}>
         <div className={styles.controls}>
-          <input type="text" value={newTodo} onChange={this.handleChange} />
-          <button onClick={this.addTodo}>Add</button>
+          <input type="text" value={newToDo} onChange={this.handleChange} />
+          <button onClick={this.addToDo}>Add</button>
         </div>
         <ul className={styles.list}>
-          {todos.map((todo, index) => (
-            <ToDo value={todo} index={index} completeTodo={this.completeTodo} />
+          {toDos.map((toDo, index) => (
+            <ToDo value={toDo} index={index} completeToDo={this.completeToDo} />
           ))}
         </ul>
       </div>
