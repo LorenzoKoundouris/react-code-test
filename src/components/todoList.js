@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ToDo from '../components/todo';
+import ToDo from './todo';
 
 import styles from '../src/styles.scss';
 
