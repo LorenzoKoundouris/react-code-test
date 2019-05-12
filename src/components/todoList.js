@@ -84,9 +84,7 @@ class ToDoList extends Component {
       <div className={styles.container}>
         <div className={styles.controls}>
           <input type="text" value={newToDo} onChange={this.handleChange} />
-          <button id="btn-add-new" onClick={this.addToDo}>
-            Add
-          </button>
+          <button onClick={this.addToDo}>Add</button>
         </div>
         <ul className={styles.list}>
           {toDos.map((toDo, index) => (
