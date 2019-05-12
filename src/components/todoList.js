@@ -32,7 +32,7 @@ class ToDoList extends Component {
   };
 
   addToDo = () => {
-    if (!this.state.newDoTo) {
+    if (!this.state.newToDo) {
       return;
     }
     this.setState({
